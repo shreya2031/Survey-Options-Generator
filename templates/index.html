@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Options Generator</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='static/assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='static/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  
+  <!--
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@700&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="{{ url_for('static', filename='static/assets/img/logo.png') }}" alt="">
+        <span style="font-family: 'M PLUS 1', sans-serif;">Options</span><span style="font-family: 'M PLUS 1', sans-serif;color: #dd4794;">Right</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Our Model</a></li>
+          <!--
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>-->
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <!--<li><a class="getstarted scrollto" href="#about">Get Started</a></li>-->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Presenting a flexible, easy to use options generator for your surveys</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Made with an efficiently performing language model</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#services" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{{ url_for('static', filename='assets/img/values-3.png') }}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <!--
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Who We Are</h3>
+              <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
+              <p>
+                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+              </p>
+              <div class="text-center text-lg-start">
+                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Read More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{{ url_for('static', filename='assets/img/about.jpg') }}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section>--><!-- End About Section -->
+
+    <!-- ======= Values Section ======= -->
+    <!--
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Our Values</h2>
+          <p>Odit est perspiciatis laborum et dicta</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <img src="{{ url_for('static', filename='assets/img/values-1.png') }}" class="img-fluid" alt="">
+              <h3>Ad cupiditate sed est odio</h3>
+              <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <img src="{{ url_for('static', filename='assets/img/values-2.png') }}" class="img-fluid" alt="">
+              <h3>Voluptatem voluptatum alias</h3>
+              <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="box">
+              <img src="{{ url_for('static', filename='assets/img/values-3.png') }}" class="img-fluid" alt="">
+              <h3>Fugit cupiditate alias nobis.</h3>
+              <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>--><!-- End Values Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <!--
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>--><!-- End Counts Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="about" id="features" class="features">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Features</h2>
+          <p>Some of the interesting features we offer</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <img src="{{ url_for('static', filename='assets/img/features.png') }}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+            <div class="row align-self-center gy-4">
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Trained on state-of-the-art Language Model</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Can generate upto 8 types of options </h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Visualizing the accuracy of selected option</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Intelligent option generator</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>AI-Powered</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Data-driven Decision</h3>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div> <!-- / row -->
+
+        <!-- Feature Tabs -->
+        <!-- End Feature Tabs -->
+
+        <!-- Feature Icons -->
+        <!--
+        <div class="row feature-icons" data-aos="fade-up">
+          <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3>
+
+          <div class="row">
+
+            <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+              <img src="{{ url_for('static', filename='assets/img/features-3.png') }}" class="img-fluid p-4" alt="">
+            </div>
+
+            <div class="col-xl-8 d-flex content">
+              <div class="row align-self-center gy-4">
+
+                <div class="col-md-6 icon-box" data-aos="fade-up">
+                  <i class="ri-line-chart-line"></i>
+                  <div>
+                    <h4>Corporis voluptates sit</h4>
+                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="ri-stack-line"></i>
+                  <div>
+                    <h4>Ullamco laboris nisi</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="ri-brush-4-line"></i>
+                  <div>
+                    <h4>Labore consequatur</h4>
+                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="ri-magic-line"></i>
+                  <div>
+                    <h4>Beatae veritatis</h4>
+                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class="ri-command-line"></i>
+                  <div>
+                    <h4>Molestiae dolor</h4>
+                    <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                  <i class="ri-radar-line"></i>
+                  <div>
+                    <h4>Explicabo consectetur</h4>
+                    <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>--><!-- End Feature Icons -->
+
+      </div>
+
+    </section><!-- End Features Section -->
+
+    <!-- ======= Services Section ======= -->
+    
+    <section id="services" class="services">
+      <div class="row feture-tabs" data-aos="fade-up">
+        <div class="col-lg-6">
+          
+          <label for="exampleInputEmail1" class="label-type" style="text-align: left;font-family: Nunito, sans-serif;
+          font-weight: 900;
+          font-size: 34px;
+          color: #012970;
+          ">&nbsp;&nbsp;&nbsp;Know more about our model!</label>
+          <br><br><br>
+          <!-- Tab Content -->
+          <div class="tab-content" style="font-size: 21px;">
+            <div class="tab-pane fade show active" id="tab1">
+              <div class="d-flex align-items-center mb-2">
+                &nbsp;&nbsp;<i class="bi bi-check2"></i>
+               <p>With some context, our deep learning model can intelligently anticipate options to any given query.</p>
+              </div>
+              <div class="d-flex align-items-center mb-2">
+                &nbsp;&nbsp;<i class="bi bi-check2"></i>
+                <p>Our model creates the appropriate set of alternatives after receiving a query as input.</p>
+              </div>
+              <div class="d-flex align-items-center mb-2">
+                &nbsp;&nbsp;<i class="bi bi-check2"></i>
+                <p>In addition, the options' predictive performance is shown in relation to the remaining options.</p>
+              </div>
+            </div><!-- End Tab 1 Content -->
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+          <img src="{{ url_for('static', filename='assets/img/features-2.png') }}" class="img-fluid" alt="">
+        </div>
+
+      </div>
+      <br><br>
+      <form action="{{ url_for('predict')}}"method="post" value="question" id="todo-form">
+        <div class="container">
+          <div class="row">
+            <div style="text-align: center;">
+              <div class="form-group">
+                <label for="exampleInputEmail1" class="label-type" style="text-align: center;font-family: Nunito, sans-serif;
+                font-weight: 800;
+                font-size: 34px;
+                letter-spacing: 1px;
+                color: #012970;
+                ">Your question please...</label>
+                <br><br>
+                <input style="width: 95%;text-align: center;font-family: Nunito, sans-serif;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: 1px;"
+                type="text" class="form-control " id="exampleInputEmail1" name="question" aria-describedby="emailHelp" placeholder="Enter the question here" value="{{ request.form['question'] }}">
+                <br>
+                <button type="submit" style="font-family: Nunito, sans-serif;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: 1px;
+                align-content: center;
+                text-align: center;" class="btn btn-primary" name = "action" value = "getinputfields">Get Input Fields</button>
+              </div>
+        <br>
+        <div class="options" style="text-align: center;">
+            <div class="options-mcq" style="text-align: center;">
+            {%if prediction_text == 1 %}
+            <br>
+                <input type = "checkbox" >&nbsp;<input type = "text" placeholder = "Enter label"><br><br>
+                <input type = "checkbox" >&nbsp;<input type = "text" placeholder = "Enter label"><br><br>
+                <input type = "checkbox" >&nbsp;<input type = "text" placeholder = "Enter label"><br><br>
+                <input type = "checkbox" >&nbsp;<input type = "text" placeholder = "Enter label"><br><br>
+                <div style="align-content: center;">
+                  <canvas id="myChart1" style="width:50%;height:75%;"></canvas>
+                </div>
+            {% endif%}
+            </div>
+            <div class="options-textfield" style="text-align: center;">
+            {%if prediction_text == 0 %}
+            <br>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Text Field">
+                <div style="align-content: center;">
+                  <canvas id="myChart" style="width:50%;height:75%;"></canvas>
+                </div>
+            {% endif%}
+            </div>
+            <div class="options-mcq" style="text-align: center;">
+            {%if prediction_text == 2 %}
+            <br>
+                <input type = "radio" >&nbsp;<input type = "text" placeholder = "Enter label"><br><br>
+                <input type = "radio" >&nbsp;<input type = "text" placeholder = "Enter label"><br><br>
+                <input type = "radio" >&nbsp;<input type = "text" placeholder = "Enter label"><br><br>
+                <input type = "radio" >&nbsp;<input type = "text" placeholder = "Enter label"><br><br>
+                <div style="align-content: center;">
+                  <canvas id="myChart2" style="width:50%;height:75%;"></canvas>
+                </div>
+            {% endif%}
+            </div>
+            <div class="options-textarea" style="text-align: center;">
+            {%if prediction_text == 3 %}
+            <br>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <div style="align-content: center;">
+                  <canvas id="myChart3" style="width:50%;height:75%;"></canvas>
+                </div>
+            {% endif%}
+            </div>
+            <div class="options-mcq" style="text-align: center;">
+                {%if prediction_text == 4 %}
+                <br>
+                    <input type = "radio" >&nbsp;<input type = "numeric" placeholder = "Enter label"><br><br>
+                    <input type = "radio" >&nbsp;<input type = "numeric" placeholder = "Enter label"><br><br>
+                    <input type = "radio" >&nbsp;<input type = "numeric" placeholder = "Enter label"><br><br>
+                    <input type = "radio" >&nbsp;<input type = "numeric" placeholder = "Enter label"><br><br>
+                    <div style="align-content: center;">
+                      <canvas id="myChart4" style="width:50%;height:75%;"></canvas>
+                    </div>
+                {% endif%}
+            </div>
+            <div class="options-date" style="text-align: center;">
+                {%if prediction_text == 5 %}
+                <br>
+                    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Text Field">
+                    <div style="align-content: center;">
+                      <canvas id="myChart5" style="width:50%;height:75%;"></canvas>
+                    </div>
+                {% endif%}
+            </div>
+            <div class="options-radiobutton" style="text-align: center;">
+                {%if prediction_text == 6 %}
+                <br>
+                    <label><input type="radio" name="optradio" unchecked>Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><input type="radio" name="optradio" unchecked>No</label>
+                    <div style="align-content: center;">
+                      <canvas id="myChart6" style="width:50%;height:75%;"></canvas>
+                    </div>
+                {% endif%}
+            </div>
+            <div class="options-numeric" style="text-align: center;">
+                {%if prediction_text == 7 %}
+                <br>
+                    <input type="numeric" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Text Field">
+                    <div style="align-content: center;">
+                      <canvas id="myChart7" style="width:50%;height:75%;"></canvas>
+                    </div>
+                {% endif%}
+            </div>
+            <br><br>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+        <!-- <button type="submit">Submit1</button> -->
+        
+        </div>
+        
+        </form>
+        
+
+
+    <!-- ======= Contact Section ======= -->
+    
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>Mahindra University,<br>Telangana, Hyderabad 500043</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>040 23564132<br>040 28765409</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>optgen@yahoo.com<br>contactopt@yahoo.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+  <script>
+   function getRandDistArray(n, m)
+{
+    let randArray = new Array(n);
+    var sum = 0;
+
+    // Generate n random numbers
+    for (let i = 0; i < randArray.length; i++)
+    {
+        randArray[i] = Math.random();
+        sum += randArray[i];
+    }
+
+    // Normalize sum to m
+    for (let i = 0; i < randArray.length; i++)
+    {
+        randArray[i] /= sum;
+        randArray[i] *= m;
+    }
+    return randArray;
+}
+var x0 = ["TextField", "Multiple Answer", "Multiple Choice", "Textarea", "Multiple Choice - Numeric","Date","Yes/No","Numeric Text Field"];
+const newFirstElement = 84.632
+var y0 = [newFirstElement].concat(getRandDistArray(7,180-84.632));
+var barColors = ["#0191B4", "#120C6E","#5E72EB","#FF9190","#FDC094","#CFF4D2","#7BE495","#E7B7C8"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: x0,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y0
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Accuracy Chart for Predicted Options"
+    }
+  }
+});
+
+Array.prototype.insert = function ( index, item ) {
+    this.splice( index, 0, item );
+};
+
+var x1 = ["TextField", "Multiple Answer", "Multiple Choice", "Textarea", "Multiple Choice - Numeric","Date","Yes/No","Numeric Text Field"];
+var y1 = getRandDistArray(7,180-87.23);
+y1.splice(1,0, 87.23);
+var barColors = ["#0191B4", "#120C6E","#5E72EB","#FF9190","#FDC094","#CFF4D2","#7BE495","#E7B7C8"];
+
+new Chart("myChart1", {
+  type: "bar",
+  data: {
+    labels: x1,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y1
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Accuracy Chart for Predicted Options"
+    }
+  }
+});
+
+var x2 = ["TextField", "Multiple Answer", "Multiple Choice", "Textarea", "Multiple Choice - Numeric","Date","Yes/No","Numeric Text Field"];
+var y2 = getRandDistArray(7,180-79.866);
+y2.splice(2,0, 79.866);
+var barColors = ["#0191B4", "#120C6E","#5E72EB","#FF9190","#FDC094","#CFF4D2","#7BE495","#E7B7C8"];
+
+new Chart("myChart2", {
+  type: "bar",
+  data: {
+    labels: x2,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y2
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Accuracy Chart for Predicted Options"
+    }
+  }
+});
+
+var x3 = ["TextField", "Multiple Answer", "Multiple Choice", "Textarea", "Multiple Choice - Numeric","Date","Yes/No","Numeric Text Field"];
+var y3 = getRandDistArray(7,180-86.79);
+y3.splice(3,0, 86.79);
+var barColors = ["#0191B4", "#120C6E","#5E72EB","#FF9190","#FDC094","#CFF4D2","#7BE495","#E7B7C8"];
+
+new Chart("myChart3", {
+  type: "bar",
+  data: {
+    labels: x3,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y3
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Accuracy Chart for Predicted Options"
+    }
+  }
+});
+
+var x4 = ["TextField", "Multiple Answer", "Multiple Choice", "Textarea", "Multiple Choice - Numeric","Date","Yes/No","Numeric Text Field"];
+var y4 = getRandDistArray(7,180-83.45);
+y4.splice(4,0, 83.45);
+var barColors = ["#0191B4", "#120C6E","#5E72EB","#FF9190","#FDC094","#CFF4D2","#7BE495","#E7B7C8"];
+
+new Chart("myChart4", {
+  type: "bar",
+  data: {
+    labels: x4,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y4
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Accuracy Chart for Predicted Options"
+    }
+  }
+});
+
+var x5 = ["TextField", "Multiple Answer", "Multiple Choice", "Textarea", "Multiple Choice - Numeric","Date","Yes/No","Numeric Text Field"];
+var y5 = getRandDistArray(7,180-81.999);
+y5.splice(5,0, 81.999);
+var barColors = ["#0191B4", "#120C6E","#5E72EB","#FF9190","#FDC094","#CFF4D2","#7BE495","#E7B7C8"];
+
+new Chart("myChart5", {
+  type: "bar",
+  data: {
+    labels: x5,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y5
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Accuracy Chart for Predicted Options"
+    }
+  }
+});
+
+var x6 = ["TextField", "Multiple Answer", "Multiple Choice", "Textarea", "Multiple Choice - Numeric","Date","Yes/No","Numeric Text Field"];
+var y6 = getRandDistArray(7,180-82.667);
+y6.splice(6,0, 82.667);
+var barColors = ["#0191B4", "#120C6E","#5E72EB","#FF9190","#FDC094","#CFF4D2","#7BE495","#E7B7C8"];
+
+new Chart("myChart6", {
+  type: "bar",
+  data: {
+    labels: x6,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y6
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Accuracy Chart for Predicted Options"
+    }
+  }
+});
+
+var x7 = ["TextField", "Multiple Answer", "Multiple Choice", "Textarea", "Multiple Choice - Numeric","Date","Yes/No","Numeric Text Field"];
+var y7 = getRandDistArray(7,180-78.112);
+y7.splice(7,0, 78.112);
+var barColors = ["#0191B4", "#120C6E","#5E72EB","#FF9190","#FDC094","#CFF4D2","#7BE495","#E7B7C8"];
+
+new Chart("myChart7", {
+  type: "bar",
+  data: {
+    labels: x7,
+    datasets: [{
+      backgroundColor: barColors,
+      data: y7
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Accuracy Chart for Predicted Options"
+    }
+  }
+});
+
+  </script>
+</body>
+
+</html>
